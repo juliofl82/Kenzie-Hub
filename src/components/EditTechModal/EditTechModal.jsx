@@ -1,36 +1,34 @@
-import React, { useState } from "react";
-import useStore from "../../store/TechStore";
+import React, { useState } from 'react';
+import useStore from '../../store/TechStore';
 
 function EditTechModal({ tech, onClose }) {
-    const [updatedTech, setUpdatedTech] = useState(tech);
-    const setTechs = useStore(state => state.setTechs);
+  const [name, setName] = useState(tech.name);
+  const [level, setLevel] = useState(tech.level);
+  const updateTech = useStore(state => state.updateTech);
 
-    const handleSubmit = () => {
-        console.log('Updating tech:', updatedTech);
-        setTechs(prevTechs => prevTechs.map(t => t.id === updatedTech.id ? updatedTech : t));
-        onClose();
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateTech({ id: tech.id, name, level });
+    onClose();
+  };
 
-    return (
-        <div>
-            <h2>Edit Tech</h2>
-            <input
-                type="text"
-                value={updatedTech.name}
-                onChange={(e) => setUpdatedTech({ ...updatedTech, name: e.target.value })}
-                placeholder="Tech Name"
-            />
-            <input
-                type="text"
-                value={updatedTech.level}
-                onChange={(e) => setUpdatedTech({ ...updatedTech, level: e.target.value })}
-                placeholder="Tech Level"
-            />
-            <button onClick={handleSubmit}>Update Tech</button>
-            <button onClick={onClose}>Close</button>
-        </div>
-    );
+  return (
+    <div className="modal">
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome" required />
+        <select value={level} onChange={(e) => setLevel(e.target.value)}>
+          <option value="Iniciante">Iniciante</option>
+          <option value="Intermediário">Intermediário</option>
+          <option value="Avançado">Avançado</option>
+        </select>
+        <button type="submit">Salvar</button>
+        <button type="button" onClick={onClose}>Fechar</button>
+      </form>
+    </div>
+  );
 }
 
 export default EditTechModal;
+
+
 

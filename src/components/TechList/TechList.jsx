@@ -1,20 +1,22 @@
-import React from "react";
-import useStore from "../../store/TechStore";
-import TechCard from "../TechCard/TechCard";
+import React from 'react';
+import useStore from '../../store/TechStore';
+import TechCard from '../TechCard/TechCard';
 
-function TechList() {
-    const techs = useStore(state => state.techs);
+function TechList({ onEdit }) {
+  const { techs } = useStore();
 
-    return (
-        <div>
-            <h2>Lista de Tecnologias</h2>
-            <ul>
-                {techs.map(tech => (
-                    <TechCard key={tech.id} tech={tech}/>
-                ))}
-            </ul>
-        </div>
-    );
+  console.log('TechList rendering techs:', techs);
+
+  return (
+    <ul>
+      {techs.map(tech => (
+        <TechCard key={tech.id} tech={tech} onEdit={() => onEdit(tech)} />
+      ))}
+    </ul>
+  );
 }
 
 export default TechList;
+
+
+
