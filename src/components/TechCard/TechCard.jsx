@@ -4,8 +4,6 @@ import useStore from '../../store/TechStore';
 function TechCard({ tech, onEdit }) {
   const removeTech = useStore(state => state.removeTech);
 
-  // Adicionando log para verificar o objeto tech recebido
-  console.log('Rendering TechCard for:', tech);
 
   return (
     <li>
@@ -21,4 +19,4 @@ export default TechCard;
 
 
 
-  
+

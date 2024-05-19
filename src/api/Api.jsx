@@ -16,6 +16,11 @@ export async function createUser(userData) {
   }
 }
 
+export const fetchTechsApi = async () => {
+  const response = await api.get('/techs');
+  return response.data;
+};
+
 // Função para buscar o perfil do usuário
 export async function fetchUserProfile(token) {
   try {
