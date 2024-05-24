@@ -26,31 +26,31 @@ function SignAuthForm() {
 
   return (
 
-
-    <div className={styles.authFormGrid}>
-      <div className={styles.authFormHeader}>
+    <div >
+      <div className='header'>
         <h1>Kenzie Hub</h1>
       </div>
-      <div className='acessGrid'>
-        <div className={styles.authFormTitle}>
+      <div className='loginGrid'>
+        <div className='loginTitle'>
           <h2>Login</h2>
         </div>
-        <div >
-          <div>            
-          </div>
-          <form className={styles.authFormInput} onSubmit={handleSubmit}>
-            <label htmlFor="emailLogin">Email</label>
-            <input id='emailLogin' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-            <label htmlFor="passwordLogin">Senha</label>
-            <input id='passwordLogin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha" required />
+        <section>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.authFormInput}>
+              <label htmlFor="emailLogin">Email</label>
+              <input id='emailLogin' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+              <label htmlFor="passwordLogin">Senha</label>
+              <input id='passwordLogin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha" required />
+            </div>
             <div className={styles.buttonGrid}>
               <button className='buttonPrimay' type="submit">Entrar</button>
-            <span>Ainda não possui uma conta?</span>
-            <button className='buttonDisabled' onClick={() => window.location.href = '/register'}>
-             Cadastre-se </button>
-            </div>            
-          </form>          
-        </div>
+              <span>Ainda não possui uma conta?</span>
+              <button className='buttonDisabled' onClick={() => window.location.href = '/register'}>
+                Cadastre-se </button>
+            </div>
+          </form>
+        </section>
+
       </div>
 
     </div>

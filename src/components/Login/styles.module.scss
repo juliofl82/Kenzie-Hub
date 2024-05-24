@@ -1,33 +1,16 @@
 @import "../../styles/index.scss";
 
 
-
-.authFormHeader {
-    display: flex;    
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    @include typo-title1;
-    color: var(--color-primary);    
-}
-
-.authFormTitle {
-    display: flex;
-    flex-direction: column;        
-    height: 80px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;    
-}
-
 .authFormInput{
-    display: flex;
-    height: 420px;
+    display: flex;    
     width: 21.875rem;
     flex-direction: column;
     justify-content: center;    
     gap: 10px;    
-    @include typo-title2;    
+    @include typo-title2; 
+    margin-top: 25px;
+    margin-bottom: 50px; 
+     
 
     input{
         display: flex;

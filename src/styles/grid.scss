@@ -1,10 +1,28 @@
-.acessGrid{
+.header {
+    display: flex;    
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    @include typo-title1;
+    color: var(--color-primary);    
+}
+
+.loginGrid{
     display: flex;
     flex-direction: column;
     max-width: 400px;
     width: 25rem;
     height: 500px;  
     background-color: var(--color-grey-3);
-    align-items: center; 
-    border-radius: 10px;     
-}
+    align-items: center;    
+    border-radius: 10px; 
+    
+    .loginTitle {
+        display: flex;
+        flex-direction: column;        
+        height: 80px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;           
+    }
+    }
