@@ -1,0 +1,36 @@
+
+.buttonPrimay{  
+    display: flex;  
+    background-color: var(--color-primary);
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 2px;
+    color: var(--color-grey-0);
+    @include typo-paragraph; 
+          
+}
+
+@mixin buttonPrimayHover {    
+        
+}
+
+@mixin buttonPrimayNegative {    
+        
+}
+
+.buttonDisabled {  
+    display: flex;  
+    background-color: var(--color-grey-1);
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 2px;
+    color: var(--color-grey-0);
+    @include typo-paragraph;        
+}
+
+@mixin buttonDisabledHover {    
+        
+}
+

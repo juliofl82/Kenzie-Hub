@@ -1,0 +1,10 @@
+.acessGrid{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 25rem;
+    height: 500px;  
+    background-color: var(--color-grey-3);
+    align-items: center; 
+    border-radius: 10px;     
+}

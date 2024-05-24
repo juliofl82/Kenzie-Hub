@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+input {
+    border: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}

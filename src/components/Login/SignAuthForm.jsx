@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';  // Importar useNavigate
 import useStore from '../../store/TechStore'; // Certifique-se de que o caminho está correto
 import axios from 'axios';
+import styles from "./styles.module.scss";
 
 function SignAuthForm() {
   const [email, setEmail] = useState('');
@@ -24,17 +25,36 @@ function SignAuthForm() {
   };
 
   return (
-    <div className="auth-form">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha" required />
-        <button type="submit">Entrar</button>
-      </form>
-      <button onClick={() => window.location.href = '/register'}>
-        Ainda não possui uma conta? Cadastre-se
-      </button>
+
+
+    <div className={styles.authFormGrid}>
+      <div className={styles.authFormHeader}>
+        <h1>Kenzie Hub</h1>
+      </div>
+      <div className='acessGrid'>
+        <div className={styles.authFormTitle}>
+          <h2>Login</h2>
+        </div>
+        <div >
+          <div>            
+          </div>
+          <form className={styles.authFormInput} onSubmit={handleSubmit}>
+            <label htmlFor="emailLogin">Email</label>
+            <input id='emailLogin' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+            <label htmlFor="passwordLogin">Senha</label>
+            <input id='passwordLogin' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha" required />
+            <div className={styles.buttonGrid}>
+              <button className='buttonPrimay' type="submit">Entrar</button>
+            <span>Ainda não possui uma conta?</span>
+            <button className='buttonDisabled' onClick={() => window.location.href = '/register'}>
+             Cadastre-se </button>
+            </div>            
+          </form>          
+        </div>
+      </div>
+
     </div>
+
   );
 }
 

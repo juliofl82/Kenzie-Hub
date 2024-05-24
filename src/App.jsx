@@ -4,6 +4,7 @@ import useStore from './store/TechStore';
 import SignAuthForm from './components/Login/SignAuthForm.jsx';
 import RegisterForm from './components/UserRegister/RegisterForm.jsx';
 import ProfilePage from './components/Profile/ProfilePage.jsx';
+import "./styles/index.scss";
 
 function App() {
   const { user } = useStore();

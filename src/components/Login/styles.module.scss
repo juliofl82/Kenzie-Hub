@@ -1,0 +1,48 @@
+@import "../../styles/index.scss";
+
+
+
+.authFormHeader {
+    display: flex;    
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    @include typo-title1;
+    color: var(--color-primary);    
+}
+
+.authFormTitle {
+    display: flex;
+    flex-direction: column;        
+    height: 80px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;    
+}
+
+.authFormInput{
+    display: flex;
+    height: 420px;
+    width: 21.875rem;
+    flex-direction: column;
+    justify-content: center;    
+    gap: 10px;    
+    @include typo-title2;    
+
+    input{
+        display: flex;
+        height: 40px;
+        border-radius: 2px;
+        background-color: var(--color-grey-2); 
+        padding-left: 10px; 
+        color: white;              
+    }
+}
+
+.buttonGrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 50px;
+    gap: 15px;    
+}
