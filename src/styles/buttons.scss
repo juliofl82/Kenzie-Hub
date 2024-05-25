@@ -30,7 +30,17 @@
     @include typo-paragraph;        
 }
 
-@mixin buttonDisabledHover {    
+.buttonDisabledHover { 
+    display: flex;  
+    background-color: var(--color-grey-3);
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 2px;
+    color: var(--color-grey-0);
+    @include typo-paragraph;
+    border-radius: 10px;
+    width: 80px;
         
 }
 
