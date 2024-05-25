@@ -1,0 +1,11 @@
+@import "../../styles/index.scss";
+
+.profileHeader{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    @include typo-title1;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-grey-1);
+}

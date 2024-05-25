@@ -50,5 +50,15 @@
             @include typo-paragraph;
         }
     }
+}
+
+.profileGrid{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 600px;
+    height: 600px;
+    background-color: var(--color-grey-4);    
+    border-radius: 10px;
 
 }
