@@ -36,32 +36,38 @@ function RegisterForm() {
           Voltar
         </button>
       </div>
-      <section className="registerGrid">
+      <div className="registerGrid">
         <div className='registerTitle'>
           <h2>Crie sua conta</h2>
-          <span>Rápido e grátis, vamos nessa</span>
+          <span className={styles.spanRegister}>Rápido e grátis, vamos nessa</span>
         </div>
-        
-        <div className={styles.registerFormInput}>
+        <section >
           <form onSubmit={handleSubmit}>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Digite aqui seu nome" required />
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite aqui seu email" required />
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Digite aqui sua senha" required />
-            <input type="text" value={bio} onChange={(e) => setBio(e.target.value)} placeholder="Fale sobre você" required />
-            <input type="text" value={contact} onChange={(e) => setContact(e.target.value)} placeholder="Opção de contato" required />
-            <select value={courseModule} onChange={(e) => setCourseModule(e.target.value)} required>
-              <option value="" disabled>Selecione o módulo do curso</option>
+            <div className={styles.registerFormInput}>
+              <label htmlFor="registerName">Nome</label>
+            <input id='registerName' type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Digite aqui seu nome" required />
+            <label htmlFor="registerEmail">Email</label>
+            <input id='registerEmail' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite aqui seu email" required />
+            <label htmlFor="registerPassword">Senha</label>
+            <input id='registerPassword' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Digite aqui sua senha" required />
+            <label htmlFor="registerBio">Bio</label>
+            <input id='registerBio' type="text" value={bio} onChange={(e) => setBio(e.target.value)} placeholder="Fale sobre você" required />
+            <label htmlFor="registerContact">Contato</label>
+            <input id='registerContact' type="text" value={contact} onChange={(e) => setContact(e.target.value)} placeholder="Opção de contato" required />
+            <label htmlFor="registerSelect">Selecionar módulo</label>
+            <select id='registerSelect' value={courseModule} onChange={(e) => setCourseModule(e.target.value)} required>              
               <option value="Primeiro módulo (Introdução ao Frontend)">Primeiro módulo (Introdução ao Frontend)</option>
               <option value="Segundo módulo (Frontend Avançado)">Segundo módulo (Frontend Avançado)</option>
               <option value="Terceiro módulo (Introdução ao Backend)">Terceiro módulo (Introdução ao Backend)</option>
               <option value="Quarto módulo (Backend Avançado)">Quarto módulo (Backend Avançado)</option>
-            </select>            
+            </select>
+            </div>            
             <div className={styles.buttonGrid}>
               <button className='buttonPrimay' type="submit">Cadastrar</button>
-            </div>            
-          </form>          
-        </div>
-      </section>
+            </div>
+          </form>
+        </section>        
+      </div>
     </div>
   );
 }

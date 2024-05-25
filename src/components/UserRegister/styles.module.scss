@@ -13,28 +13,36 @@
     display: flex;  
     flex-direction: column;  
     width: 21.875rem;       
-    justify-content: center;    
-    gap: 10px;    
-    @include typo-title2; 
-    margin-top: 25px;
-    margin-bottom: 50px; 
-    border: red 2px solid;
+    justify-content: space-between;       
+    @include typo-headline; 
+    margin-top: 15px;
+    margin-bottom: 10px;    
+    gap: .625rem;
      
 
     input{
         display: flex;
+        width: 100%;
         height: 40px;
         border-radius: 2px;
         background-color: var(--color-grey-2); 
-        padding-left: 10px; 
-        color: white;              
+        padding-left: 10px;         
+        color: white;                      
+    }
+
+    select{
+        display: flex;
+        width: 100%;
+        height: 40px;
+        border-radius: 2px;
+        background-color: var(--color-grey-2); 
+        padding-left: 10px;         
+        color: white;
     }
 }
 
 .buttonGrid{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    margin-top: 50px;
-    gap: 15px;    
+    justify-content: flex-end;           
 }

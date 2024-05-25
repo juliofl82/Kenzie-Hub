@@ -50,9 +50,7 @@ function SignAuthForm() {
             </div>
           </form>
         </section>
-
       </div>
-
     </div>
 
   );
